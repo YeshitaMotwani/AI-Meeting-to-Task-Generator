@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Meeting Task Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>AI Meeting Task Generator</h1>
+      <p>Paste your meeting transcript below and let AI generate tasks.</p>
+      <div class="form-group">
+        <label for="title">Meeting Title</label>
+        <input
+          type="text"
+          id="title"
+          placeholder="e.g. Sprint Planning — April 2026"
+        />
+      </div>
+      <div class="form-group">
+        <label for="participants">Participants</label>
+        <input
+          type="text"
+          id="participants"
+          placeholder="e.g. Alice, Bob, Charlie"
+        />
+      </div>
+      <div class="form-group">
+        <label for="transcript">Meeting Transcript</label>
+        <textarea
+          id="transcript"
+          rows="8"
+          placeholder="Paste your full meeting transcript here..."
+        ></textarea>
+      </div>
+      <button id="generateBtn" onclick="generateTasks()">
+        Generate Tasks
+      </button>
+      <div id="status" class="status"></div>
+
+
+      <!-- <div id="tasksSection" class="tasks-section" style="display: none">
+        <h2>Generated Tasks</h2>
+        <div id="tasksList"></div>
+      </div> -->
+
+
+
+      <!-- TASKS SECTION -->
+      <div id="tasksSection" class="tasks-section" style="display: none">
+        <h2>Generated Tasks</h2>
+
+        <!-- HEADER ROW -->
+        <div class="task-header">
+          <span>Task</span>
+          <span>Priority</span>
+          <span>Status</span>
+        </div>
+
+        <!-- TASK LIST -->
+        <div id="tasksList"></div>
+      </div>
+      
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
